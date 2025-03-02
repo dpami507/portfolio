@@ -20,7 +20,7 @@ nav {
     width: 100%;
 }
 
-li {
+#navbar > ul > li {
     padding: 0px;
     margin: 0px;
     display: inline-flex;
