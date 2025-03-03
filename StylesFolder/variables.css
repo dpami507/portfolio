@@ -1,0 +1,57 @@
+:root {
+    --background: rgb(14, 19, 14);
+    --backgroundSecondary: rgb(8, 10, 8);
+    --accent1: #2da022;
+    --accent2: #ffe96c;
+    --accentMid: #6e9e16;
+    --bannerWidth: 40vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background)
+}
+
+nav {
+    padding: 0px;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+
+#navbar > ul > li {
+    padding: 0px;
+    margin: 0px;
+    display: inline-flex;
+    float: left;
+}
+
+.navitem {
+    padding: 20px;
+    margin: 0px;
+    border-bottom: rgba(0, 0, 0, 0) 1px solid;
+    text-decoration: none;
+    color: white;
+}
+
+.navitem:hover {
+    border-bottom: white 1px solid;
+    transition: .2s;
+}
+
+@keyframes gradientLine {
+    0% {border-image-source: linear-gradient(to right, var(--accent1), var(--accentMid), var(--accent2));}
+    33% {border-image-source: linear-gradient(to right, var(--accent2), var(--accent1), var(--accentMid));}
+    66% {border-image-source: linear-gradient(to right, var(--accentMid), var(--accent2), var(--accent1));}
+    100% {border-image-source: linear-gradient(to right, var(--accent1), var(--accentMid), var(--accent2));}
+}

@@ -1,79 +1,40 @@
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: rgb(12, 2, 11)
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-nav {
-    padding: 0px;
-    position: fixed;
-    z-index: 10;
+#photo {
     width: 100%;
-}
-
-#navbar > ul > li {
-    padding: 0px;
-    margin: 0px;
-    display: inline-flex;
-    float: left;
-}
-
-.navitem {
-    padding: 20px;
-    margin: 0px;
-    border-bottom: rgba(0, 0, 0, 0) 1px solid;
-    text-decoration: none;
-    color: white;
-}
-
-.navitem:hover {
-    border-bottom: white 1px solid;
-    transition: .2s;
-}
-
-#name {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-
-    font-size: 3vw;
-    color: white;
-    font-weight: 100;
-    text-align: left;
-    padding-left: 5vw;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20vw;
 }
 
 #splash {
     height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100vw;
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: space-between; /* Ensures text and image are separate */
+
+    background-color: var(--backgroundSecondary);
+
     border-bottom: 10px solid;
     border-image-slice: 1;
     border-width: .15vw;
-    border-image-source: linear-gradient(to left, #4e26d3, #d5593a);
-    border-image-source: linear-gradient(to right, #4e26d3, #d5593a);
+
     animation-name: gradientLine;
     animation-iteration-count: infinite;
     animation-duration: 10s;
-    background-color: black;
+
+    overflow: hidden; /* Prevents overflow issues */
 }
 
-@keyframes gradientLine {
-    0% {border-image-source: linear-gradient(to right, #4e26d3, #8F3E8A, #d5593a);}
-    33% {border-image-source: linear-gradient(to right, #d5593a, #4e26d3, #8F3E8A);}
-    66% {border-image-source: linear-gradient(to right, #8F3E8A, #d5593a, #4e26d3);}
-    100% {border-image-source: linear-gradient(to right, #4e26d3, #8F3E8A, #d5593a);}
+#splash > h1 {
+    margin: 0px;
+    padding: 10vw;
+    font-size: 3vw;
+
+    color: white;
+    font-weight: 100;
 }
 
 /*-----------------------------------*/
@@ -133,7 +94,7 @@ nav {
     border: 1px solid;
     border-image-slice: 1;
     border-width: .15vw;
-    border-image-source: linear-gradient(to left, #4e26d3, #d5593a);
+    border-image-source: linear-gradient(to left, var(--accent1), var(--accent2));
 
     --myColor1: transparent;
     --myColor2: transparent;
@@ -149,10 +110,10 @@ nav {
     border: 1px solid;
     border-image-slice: 1;
     border-width: .15w;
-    border-image-source: linear-gradient(to left, #4e26d3, #d5593a);
+    border-image-source: linear-gradient(to left, var(--accent1), var(--accent2));
 
-    --myColor1: #4e26d3;
-    --myColor2: #d5593a;
+    --myColor1: var(--accent1);
+    --myColor2: var(--accent2);
 
     background: linear-gradient(to left, var(--myColor1), var(--myColor2));
 }
