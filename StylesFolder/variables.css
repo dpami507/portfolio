@@ -4,7 +4,7 @@
     --accent1: #2da022;
     --accent2: #ffe96c;
     --accentMid: #6e9e16;
-    --bannerWidth: 40vh;
+    --bannerWidth: 30vh;
 }
 
 html {
@@ -16,6 +16,23 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--background);
+  }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--accentMid); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent2); 
+  }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
