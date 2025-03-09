@@ -56,8 +56,10 @@ li {
 
 #work_card > div {
     position: absolute;
-    bottom: 15px;
-    left: 20px;
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
     font-size: 2vw;
     color: white;
     text-decoration: none;
@@ -100,7 +102,6 @@ li {
 
     #work_card {
         position: relative;
-        text-align: center;
         border-radius: 1vw;
         height: 50vw;
         width: 50vw;
