@@ -6,7 +6,7 @@ import Heading from '../components/Heading.jsx'
 import BoxLink from '../components/BoxLink.jsx';
 import PopUp from '../components/PopUp.jsx'
 
-function Game() {
+function Projects() {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [currentPopup, setCurrentPopup] = useState({});
 
@@ -37,7 +37,7 @@ function Game() {
     return (
     <>
         <PopUp isOpen={isPopupOpen} onClose={closePopup} img={currentPopup.img} link={currentPopup.link} title={currentPopup.title} description={currentPopup.description}/>
-        <Heading title={"Games"}/>
+        <Heading title={"Projects"}/>
         <ol className='workcomp-container'>
             {items}
         </ol>
@@ -45,4 +45,4 @@ function Game() {
     )
 }
 
-export default Game
+export default Projects

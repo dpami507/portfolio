@@ -32,8 +32,8 @@ function Nav() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/games" className="navitem" onClick={closeMenu}>
-            Games
+          <NavLink to="/projects" className="navitem" onClick={closeMenu}>
+            Projects
           </NavLink>
         </li>
         <li>
