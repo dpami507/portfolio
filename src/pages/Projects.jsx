@@ -23,7 +23,7 @@ function Projects() {
     const items = [];
 
     for (let i = 0; i < workList.length; i++) {
-        if(workList[i].type !== "game") continue;
+        if(workList[i].type !== "game" && workList[i].type !== "project") continue;
         items.push(
             <BoxLink 
             img={workList[i].img} 
