@@ -8,7 +8,7 @@ function BoxLink({img, link, title, description}) {
           <div>
             <h3>{title}</h3>
           </div>
-          <img src={getImagePath(img)} alt="" />
+          <img src={getImagePath(img)} alt={title || "Project Screenshot"} loading="lazy"/>
         </button>
     </>
   )

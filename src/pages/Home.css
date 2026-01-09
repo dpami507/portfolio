@@ -4,6 +4,12 @@ body {
   background: var(--background);
 }
 
+.landing-text {
+  place-self: center;
+  margin: 10vw;
+  color: white;
+}
+
 .landing {
   background: var(--backgroundSecondary);
   width: 100%;
@@ -24,14 +30,14 @@ body {
   overflow: hidden;
 }
 
-.landing h1 {
-  place-self: center;
-  color: white;
+.landing-text h1 {
   font-size: 3vw;
   font-weight: 100;
   z-index: 1;
-
-  margin: 10vw;
+}
+.landing-text p {
+  font-style: italic;
+  color: lightgray;
 }
 
 .landing img {

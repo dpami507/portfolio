@@ -86,7 +86,7 @@
     transform: rotate(45deg);
 }
 
-.popupContainer div p {
+.popupContainer .desc {
     color: white;
     font-size: 2rem;
 }
@@ -99,17 +99,32 @@
     border-radius: 0px 10px 10px 0px;
 }
 
-.popupContainer a {
+.popupContainer .bottomInfo {
     position: absolute;
     bottom: 20px;
     left: 20px;
 
+    display: flex;
+    flex-direction: column;
+
+    z-index: 10;
+
+    height: auto;
+}
+
+.bottomInfo p
+{
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.bottomInfo a
+{
     color: var(--accent2);
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: underline;
-
-    z-index: 10;
 }
 
 @media (max-width: 1024px) {

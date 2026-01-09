@@ -1,18 +1,38 @@
 // src/data/work.js
-export const workList = [
-  { type: 'project', img: 'Project_imgs/genExample.png', link: "https://github.com/dpami507/gpr200-final", title: "Terrain Generation", description: "Procedural Terrain generator built in OpenGL with real-time rendering. Implemented the Perlin noise algorithm for height mapping and calculated normals from the height data for lighting. Created a height-based texture blending system. Built a modifiable terrain system that integrated with teammates' raycasting implementation."},
-  { type: 'project', img: 'Project_imgs/Board.png', link: "https://github.com/dpami507/chess-competition", title: "Chess Bot", description: "Chess AI built in C++ with alpha-beta pruning for competitive play. Implemented minimax algorithm foundation and initial board evaluation heuristics, achieving 4-ply search depth within hardware constraints. Collaborated with 2 developers on alpha-beta pruning optimization and advanced heuristic implementation."},
-  { type: 'art', img: 'Work_imgs/Thunderbird4_07.png', link: "Work_imgs/Thunderbird4_07.png", title: "Thunderbird 4", description: "3D model of Thunderbird 4 submarine from 'Thunderbirds Are Go!' (2015). Modeled in Blender with custom metallic hull shaders. Created underwater environment using volumetric lighting, caustics, and atmospheric effects."},
-  { type: 'game', img: '/Game_imgs/KB.png', link: "https://dpami507.itch.io/killerbeatz", title: "KillerBeatz", description: "Rhythm-action game built in 5 days for GMTK Game Jam 2025. Designed loop-based combat where drum patterns create recurring attack pulses synchronized to beat timing. Implemented expanding circle collider detection with particle VFX for beat visualization in Unity. Shipped a fully playable game on deadline." },
-  { type: 'game', img: '/Game_imgs/Sound_2.png', link: "https://web.archive.org/web/20250428174405/https:/www.littleguygrove.com/", title: "Little Guy Grove", description: "Led 4-person team for campus-wide ARG at Champlain College. Designed and maintained an interactive website using Wix, managing weekly content updates and puzzle additions. Coordinated with narrative, art, and puzzle teams to ensure cohesive player experience across 6-week event." },
-  { type: 'game', img: '/Game_imgs/Tanks.png', link: "https://dpami507.github.io/GMD200_GridGame_DA/", title: "TANKS: Card Edition", description: "Grid-based strategy game featuring card-driven tank actions. Implemented modular card system using Unity’s Scriptable Objects for reusable game logic. Designed grid navigation and turn-based combat with randomized deck mechanics." },
-  { type: 'game', img: '/Game_imgs/CharliesAdventure.png', link: "https://dpami507.github.io/GMD200_Platformer_DA/", title: "Charlie's Adventure", description: "2D platformer with collectibles, moving platforms, and environmental hazards. Created immersive cave atmosphere using Unity's 2D lighting, ambient sound design, and dynamic music system. Focused on responsive movement controls and visual polish." },
-  { type: 'game', img: '/Game_imgs/GrappleCupeOfPower.png', link: "https://dpami507.github.io/GMD200_ArcadeShooter_DA/", title: "Grapple Cube of Power", description: "2D arcade shooter featuring grappling-hook movement and varied enemy encounters. Implemented physics-based grappling using Unity’s Spring Joint 2D and Rigidbody components. Created multiple enemy types and a boss fight triggered by score threshold." },
-  { type: 'game', img: 'Game_imgs/JFOC.png', link: "https://dpami507.itch.io/john-friend-office-crusade", title: "John + Friend Office Crusade", description: "2D Arcade shoot ‘em up game featuring wave-based enemy spawning and player progression system. Implemented object pooling to support 200+ concurrent enemies at a framerate. Designed escalating difficulty with varied enemy types. Collaborated with teammate on upgrade implementation." },
-  { type: 'art', img: 'Work_imgs/Thunderbird3_010.png', link: "Work_imgs/Thunderbird3_010.png", title: "Thunderbird 3", description: "3D model of Thunderbird 3 spacecraft from 'Thunderbirds Are Go!' (2015). Modeled in Blender with volumetric smoke simulations for rocket booster exhaust trails. Created space environment using a custom skybox."},
-  { type: 'art', img: 'Work_imgs/PyromaniacPenguins.png', link: "Work_imgs/PyromaniacPenguins.png", title: "Pyromaniac Penguins", description: "3D model of a penguin in a flamethrower chair with a drone companion. Modeled in Blender using volumetric flame simulations. Used curve modeling for detailed pipes, wires, and structural components."},
-  { type: 'art', img: 'Work_imgs/Thunderbird2_003.png', link: "Work_imgs/Thunderbird2_003.png", title: "Thunderbird 2", description: "3D model of Thunderbird 2 cargo ship from 'Thunderbirds Are Go!' (2015). Modeled in Blender with volumetric smoke simulations for sand kicked up by thrusters. Created custom emission shaders for engine effects."},
-  { type: 'art', img: 'Work_imgs/Suit4.png', link: "Work_imgs/Suit4.png", title: "Suits", description: "3D model of tailored suit created in Blender from sewing pattern templates. Used cloth simulation to assemble pattern pieces with realistic seams and draping. Modeled accurate fit and fabric behavior."},
-  { type: 'art', img: 'Work_imgs/DoorShot4K.png', link: "Work_imgs/DoorShot4K.png", title: "TARDIS Interior", description: "Custom TARDIS interior console room design modeled in Blender. Created detailed mechanical components, brass fixtures, and control panel instrumentation. Implemented custom emission shaders with animated lighting sequences."},
-  { type: 'art', img: 'Work_imgs/Thunderbird1_003.png', link: "Work_imgs/Thunderbird1_003.png", title: "Thunderbird 1", description: "3D model of Thunderbird 1 hypersonic rocket from 'Thunderbirds Are Go!' (2015). Modeled in Blender with volumetric materials for thruster effects. Created a grass environment using Blender's particle system."},
-];
+import { useEffect, useState } from 'react';
+import Papa from 'papaparse';
+
+const sheetCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQO_f2HDT_qROEUC6ELdTKbDmahQsaC5y03yB8F2b3sTZO6zJaUFdNNXVCEijU1gBft6mOT7ALUA0Ml/pub?gid=0&single=true&output=csv";
+
+export function useWorkList() {
+  const [workList, setWorkList] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    Papa.parse(sheetCSV, {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      transform: (value, field) => {
+        // Convert string booleans
+        if (value === 'TRUE') return true;
+        if (value === 'FALSE') return false;
+
+        return value;
+      },
+      complete: (results) => {
+        console.log('Loaded projects:', results.data);
+        setWorkList(results.data);
+        setLoading(false);
+      },
+      error: (err) => {
+        console.error('Error loading sheet:', err);
+        setError(err);
+        setLoading(false);
+      }
+    });
+  }, []);
+
+  return { workList, loading, error };
+}

@@ -12,7 +12,7 @@ function WorkComponent({img, link, title, description}) {
             <a href={link} target="_blank">Click To See</a>
           </div>
 
-          <img src={getImagePath(img)} alt="" />
+          <img src={getImagePath(img)} alt={title || "Project Screenshot"} loading="lazy"/>
         </div>
     </>
   )
