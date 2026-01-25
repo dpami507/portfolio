@@ -30,7 +30,7 @@ function ProjectDetail() {
             <div className='d-see-more'> 
                 <a href={project.link} target='_blank'>See More on {project.link_type}</a>
             </div>
-            <button className='back-button' onClick={() => navigate(`/${(project.type) === "art" ? "/art" : "/projects"}`)}>
+            <button className='back-button' onClick={() => navigate(`/${(project.type) === "art" ? "art" : "projects"}`)}>
                 <span></span>
                 <span></span>
             </button>
