@@ -4,10 +4,7 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Art from './pages/Art';
 import Contact from './pages/Contact';
-
-/*        
-<Route path="/contact" element={<Contact />} />
-*/
+import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
   return (
@@ -18,6 +15,8 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/art" element={<Art />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/projects/:projectId" element={<ProjectDetail />} />
+        <Route path="/art/:projectId" element={<ProjectDetail />} />
       </Routes>
     </>
   );

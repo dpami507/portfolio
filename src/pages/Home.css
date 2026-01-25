@@ -1,9 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--background);
-}
-
 .landing-text {
   place-self: center;
   margin: 10vw;
@@ -31,11 +25,13 @@ body {
 }
 
 .landing-text h1 {
-  font-size: 3vw;
+  font-size: 3.5rem;
   font-weight: 100;
   z-index: 1;
+  text-wrap-mode: nowrap;
 }
 .landing-text p {
+  font-size: 1rem;
   font-style: italic;
   color: lightgray;
 }
@@ -84,7 +80,6 @@ body {
   margin: 0;
   padding: 2rem 1rem;
   color: white;
-  text-align: center;
 }
 
 .recentwork h2 {
@@ -92,6 +87,7 @@ body {
   font-size: 2.5vw;
   margin-top: 20px;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .boxlink-container {
@@ -128,9 +124,14 @@ body {
     padding: 2rem 1rem;
   }
 
-  .landing h1 {
+  .landing-text h1 {
     font-size: 8vw;
     margin-bottom: 1rem;
+
+    text-align: center;
+  }
+  .landing-text p {
+    text-align: center;
   }
 
   .landing img {

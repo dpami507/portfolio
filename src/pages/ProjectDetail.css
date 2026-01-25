@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  width: 100%;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 750px;
+    margin: 50px;
+    padding: 20px;
+
+    border: 2px rgba(0, 0, 0, .5) ridge;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.75);
+
+    backdrop-filter: blur(10px);
+}
+
+.project-container img {
+  width: 100%;
+  height: auto;
+
+  border: 2px var(--accent2) solid;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.project-container > h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.project-container > p {
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  text-align: left;
+  width: 80%;
+}
+
+.tech-stack-detail {
+  margin-top: 20px;
+  width: 80%;
+  color: white;
+}
+.tech-stack-detail > p {
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.5rem;
+}
+
+.d-see-more {
+  margin-top: 20px;
+
+  border: 3px var(--accent2) solid;
+
+  border-radius: 100vmax;
+  padding: 10px 20px;
+
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.d-see-more a {
+  color: white;
+  text-decoration: none;
+}
+
+.d-see-more:hover {
+  background-color: var(--accent2);
+}
+
+.back-button
+{
+  position: fixed;
+
+  left: -60px;
+  top: 10px;
+
+  height: 50px;
+  width: 50px;
+
+  background-color: rgba(0, 0, 0, 0.0);
+  backdrop-filter: blur(10px);
+
+  border: 3px solid white;
+  border-radius: 100vmax;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.back-button span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.back-button span:nth-child(1) {
+    transform: rotate(-45deg) translate(0px, -4px);
+}
+
+.back-button span:nth-child(2) {
+    transform: rotate(45deg) translate(0px, 4px);
+}

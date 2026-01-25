@@ -15,6 +15,12 @@ body
   padding: 0;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  background-size: 80px 80px;
+  background-image: 
+    linear-gradient(to right, var(--backgroundSecondary) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--backgroundSecondary) 1px, transparent 1px);
+  background-color: var(--background);
 }
 
 * {
@@ -39,4 +45,18 @@ body
 
     margin-top: 2.5vw;
     margin-bottom: 2.5vw;
+}
+
+.error {
+    color: rgb(255, 128, 128);
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.loading {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 2rem;
 }

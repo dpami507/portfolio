@@ -1,4 +1,3 @@
-// src/data/work.js
 import { useEffect, useState } from 'react';
 import Papa from 'papaparse';
 
