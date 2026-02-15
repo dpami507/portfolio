@@ -45,7 +45,7 @@ function Home() {
                 <p className='subtitle'>Game Programming Student</p>
                 <p className='tech'>C++ / C# (.NET) / Git / Unity / OpenGL</p>
             </div>
-            <img src= {getImagePath('/imgs/DavidAmidon.jpg')} alt="" />
+            <img src= {getImagePath('imgs/DavidAmidon.jpg')} alt="" />
         </div>
 
         <div className='about'>
