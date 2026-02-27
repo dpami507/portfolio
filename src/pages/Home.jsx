@@ -46,7 +46,7 @@ function Home() {
                 <p className='tech'>C++ / C# (.NET) / Git / Unity / OpenGL</p>
                 <p>Burlington, VT</p>
             </div>
-            <img src= {getImagePath('/imgs/DavidAmidon.jpg')} alt="" />
+            <img src= {getImagePath('imgs/DavidAmidon.jpg')} alt="" />
         </div>
 
         <div className='about'>
