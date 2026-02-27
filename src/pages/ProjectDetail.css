@@ -119,3 +119,17 @@
 .back-button span:nth-child(2) {
     transform: rotate(45deg) translate(0px, 4px);
 }
+
+@media (max-width: 800px) {
+.project-container {
+    width: 500px;
+}
+
+}
+
+@media (max-width: 600px) {
+.project-container {
+    width: 300px;
+}
+
+}
