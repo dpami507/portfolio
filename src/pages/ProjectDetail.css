@@ -124,12 +124,38 @@
 .project-container {
     width: 500px;
 }
+.project-container > h2 {
+  font-size: 2.0rem;
+}
+.project-container > p {
+  font-size: 1.15rem;
+  width: 85%;
+}
+.tech-stack-detail > p {
+  font-size: 1.35rem;
+}
+.tech-stack-detail {
+  width: 85%;
+}
 
 }
 
 @media (max-width: 600px) {
 .project-container {
     width: 300px;
+}
+.project-container > h2 {
+  font-size: 1.5rem;
+}
+.project-container > p {
+  font-size: 1.0rem;
+  width: 90%;
+}
+.tech-stack-detail > p {
+  font-size: 1.25rem;
+}
+.tech-stack-detail {
+  width: 90%;
 }
 
 }
