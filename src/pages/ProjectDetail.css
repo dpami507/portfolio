@@ -30,9 +30,6 @@
   display: block;
   z-index: 1;
 
-  border: 2px var(--accent2) solid;
-  border-radius: 10px;
-
   -webkit-mask-image: radial-gradient(
     circle 30px at calc(15px) calc(15px),
     transparent 95%,
@@ -50,6 +47,8 @@
 .image-wrapper img {
   display: block;
 
+  border: 2px var(--accent2) solid;
+  border-radius: 10px;
   width: 100%;
   height: auto;
 }

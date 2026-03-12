@@ -57,10 +57,10 @@
 
 .hamburger span {
     width: 30px;
-    height: 3px;
+    height: 2px;
     background-color: white;
-    margin: 4px 0;
-    transition: 0.3s;
+    margin: 5px 0;
+    transition: 0.2s;
 }
 
 /* Mobile styles */
@@ -75,7 +75,7 @@
 
     /* Hamburger animation when open */
     .hamburger.active span:nth-child(1) {
-        transform: rotate(-45deg) translate(-6px, 7px);
+        transform: translate(-0px, 12px) rotate(-45deg);
     }
 
     .hamburger.active span:nth-child(2) {
@@ -83,7 +83,7 @@
     }
 
     .hamburger.active span:nth-child(3) {
-        transform: rotate(45deg) translate(-6px, -7px);
+        transform: translate(-0px, -12px) rotate(45deg);
     }
 
     #navbar > ul {
@@ -95,7 +95,7 @@
         background: rgba(0, 0, 0, 0.98);
         flex-direction: column;
         padding-top: 80px;
-        transition: left 0.3s ease-in-out;
+        transition: left 0.2s ease-in-out;
     }
 
     #navbar > ul.active {
