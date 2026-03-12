@@ -12,6 +12,8 @@
     flex-direction: column;
     align-items: center;
 
+    position: relative;
+
     width: 750px;
     margin: 50px;
     padding: 20px;
@@ -23,13 +25,33 @@
     backdrop-filter: blur(10px);
 }
 
-.project-container img {
-  width: 100%;
-  height: auto;
+.image-wrapper {
+  position: relative;
+  display: block;
+  z-index: 1;
 
   border: 2px var(--accent2) solid;
   border-radius: 10px;
+
+  -webkit-mask-image: radial-gradient(
+    circle 30px at calc(15px) calc(15px),
+    transparent 95%,
+    black 100%
+  );
+  mask-image: radial-gradient(
+    circle 30px at calc(15px) calc(15px),
+    transparent 95%,
+    black 100%
+  );
+
   margin-bottom: 20px;
+}
+
+.image-wrapper img {
+  display: block;
+
+  width: 100%;
+  height: auto;
 }
 
 .project-container > h2 {
@@ -81,9 +103,9 @@
 
 .back-button
 {
-  position: fixed;
+  position: absolute;
 
-  left: -60px;
+  left: 10px;
   top: 10px;
 
   height: 50px;
@@ -92,23 +114,25 @@
   background-color: rgba(0, 0, 0, 0.0);
   backdrop-filter: blur(10px);
 
-  border: 3px solid white;
+  border: 2px var(--accent2) solid;
   border-radius: 100vmax;
   cursor: pointer;
 
   transition: 0.3s ease;
+
+  z-index: 2;
 }
 
 .back-button:hover {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--accent2);
 }
 
 .back-button span {
     display: block;
     width: 20px;
-    height: 3px;
+    height: 2px;
     margin: 5px auto;
-    background-color: white;
+    background-color: var(--accent2);
     transition: all 0.3s ease;
 }
 

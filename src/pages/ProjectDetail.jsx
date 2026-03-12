@@ -19,7 +19,9 @@ function ProjectDetail() {
     <>
     <div className='container'>
         <div className="project-container">
-            <img src={getImagePath(project.img)} alt={project.title || "Project Screenshot"} loading="lazy"></img>
+            <div className='image-wrapper'>
+                <img src={getImagePath(project.img)} alt={project.title || "Project Screenshot"} loading="lazy"></img>
+            </div>
             <h2>{project.title}</h2>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;{project.description}</p>
             <div className="tech-stack-detail">
