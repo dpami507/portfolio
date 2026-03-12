@@ -8,6 +8,10 @@
 
     padding: 0;
     margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 body 
@@ -22,6 +26,13 @@ body
     linear-gradient(to bottom, var(--backgroundSecondary) 1px, transparent 1px);
   background-color: var(--background);
 }
+
+html, body #root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}   
 
 * {
     margin: 0;

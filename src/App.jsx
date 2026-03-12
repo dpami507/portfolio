@@ -5,19 +5,23 @@ import Projects from './pages/Projects';
 import Art from './pages/Art';
 import Contact from './pages/Contact';
 import ProjectDetail from './pages/ProjectDetail';
+import Footer from './components/Footer.jsx';
 
 function App() {
   return (
     <>
       <Nav/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/art" element={<Art />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/projects/:projectId" element={<ProjectDetail />} />
-        <Route path="/art/:projectId" element={<ProjectDetail />} />
-      </Routes>
+      <div style={{ flex: 1 }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/art" element={<Art />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects/:projectId" element={<ProjectDetail />} />
+          <Route path="/art/:projectId" element={<ProjectDetail />} />
+        </Routes>
+      </div>
+      <Footer />
     </>
   );
 }
