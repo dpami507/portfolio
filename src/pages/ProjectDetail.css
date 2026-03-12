@@ -29,6 +29,7 @@
   position: relative;
   display: block;
   z-index: 1;
+  width: 100%;
 
   -webkit-mask-image: radial-gradient(
     circle 30px at calc(15px) calc(15px),
