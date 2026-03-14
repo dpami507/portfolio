@@ -2,6 +2,7 @@ import './Home.css'
 import { useWorkList } from '../work.js';
 import { getImagePath } from '../utils/helpers'
 import BoxLink from '../components/BoxLink.jsx'
+import { MdHeight } from 'react-icons/md';
 
 function Home() {
     const { workList, loading, error } = useWorkList();
@@ -47,9 +48,13 @@ function Home() {
                 <p>Burlington, VT</p>
             </div>
             <img src= {getImagePath('imgs/DavidAmidon.jpg')} alt="" />
+            <a className='landing-jump' href="#about" style={{height: "10px"}}>
+                <span></span>
+                <span></span>
+            </a>
         </div>
 
-        <div className='about'>
+        <div id='about'>
             <h2>About Me</h2>
             <p>I'm David Amidon, a Game Programming student at Champlain College, working primarily in C++, C#, and Unity.</p>
             <p>I enjoy building games and figuring out how to make things work the way I want them to. I like the problem-solving side of development and working with others on creative projects.</p>

@@ -43,7 +43,7 @@
   height: 100vh;
 }
 
-.about {
+#about {
   width: 100%;
   min-height: 50svh;
   display: flex;
@@ -56,14 +56,14 @@
   text-align: center;
 }
 
-.about h2 {
+#about h2 {
   font-weight: 500;
   font-size: 2.5vw;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.about p {
+#about p {
   font-weight: 100;
   font-size: 1.25vw;
   width: 60vw;
@@ -98,18 +98,56 @@
   max-width: 1200px;
 }
 
+.landing-jump {
+  position: absolute;
+  z-index: 1;
+  bottom: 50px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 1rem;
+  color: lightgray;
+  text-decoration: none;
+
+  padding: 20px;
+}
+.landing-jump span {
+  position: absolute;
+  display: block;
+
+  justify-self: center;
+
+  width: 20px;
+  height: 20px;
+
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+
+  transform: translateY(-50%) rotate(45deg);
+
+  transition: .2s;
+}
+.landing-jump:hover span:nth-child(1) {
+  transform: translate(0, calc(-50% + 5px)) rotate(45deg);
+}
+.landing-jump:hover span:nth-child(2) {
+  transform: translate(0, calc(-50% + 20px)) rotate(45deg) scale(0.75);
+  opacity: 0.5;
+}
+
 /* Tablet breakpoint */
 @media (max-width: 1024px) {
   .landing h1 {
     font-size: 4vw;
   }
 
-  .about h2,
+  #about h2,
   .recentwork h2 {
     font-size: 3.5vw;
   }
 
-  .about p {
+  #about p {
     font-size: 2vw;
     width: 80vw;
   }
@@ -141,16 +179,16 @@
     object-fit: cover;
   }
 
-  .about {
+  #about {
     padding: 3rem 1.5rem;
     min-height: auto;
   }
 
-  .about h2 {
+  #about h2 {
     font-size: 6vw;
   }
 
-  .about p {
+  #about p {
     font-size: 4vw;
     width: 90vw;
   }
@@ -184,12 +222,12 @@
     font-size: 10vw;
   }
 
-  .about h2,
+  #about h2,
   .recentwork h2 {
     font-size: 7vw;
   }
 
-  .about p {
+  #about p {
     font-size: 4.5vw;
     width: 95vw;
   }
