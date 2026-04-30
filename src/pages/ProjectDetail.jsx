@@ -15,6 +15,12 @@ function ProjectDetail() {
         return <div className="loading">Loading project...</div>;
     }
 
+    const seeMoreButton = project.link_type === "" ? null : (
+        <div className='d-see-more'>
+            <a href={project.link} target='_blank'>See More on {project.link_type}</a>
+        </div>
+    );
+
     return (
     <>
     <div className='container'>
@@ -29,9 +35,9 @@ function ProjectDetail() {
                 <p><b>Role:</b> {project.role}</p>
                 <p><b>Date:</b> {project.date}</p>
             </div>
-            <div className='d-see-more'> 
-                <a href={project.link} target='_blank'>See More on {project.link_type}</a>
-            </div>
+
+           {seeMoreButton}
+
             <button className='back-button' onClick={() => navigate(`/${(project.type) === "art" ? "art" : "projects"}`)}>
                 <span></span>
                 <span></span>
