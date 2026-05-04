@@ -25,7 +25,10 @@ jobs:
       
     - name: Build
       run: npm run build
-      
+      env:
+        VITE_AIRTABLE_TOKEN: ${{ secrets.VITE_AIRTABLE_TOKEN }}
+        VITE_AIRTABLE_BASE_ID: ${{ secrets.VITE_AIRTABLE_BASE_ID }}
+
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
