@@ -1,8 +1,11 @@
 import './Contact.css'
 import Heading from '../components/Heading.jsx'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { useWorkList } from '../work.js';
 
 function Contact() {
+    const { workList, assets, loading, error } = useWorkList();
+
     return (
     <>
         <Heading title={"Contact"}/>
@@ -19,8 +22,8 @@ function Contact() {
 
             <div className="border_line"></div>
 
-            <a href="David Amidon-Resume.pdf" className="resume" target="_blank">
-              <img src="imgs/Resume.png" alt="" />
+            <a href="https://drive.google.com/file/d/1-_TowS3IwQnTeMnhOMAtZvo4yRy4kjvAhN3BFHFZuaU/view" className="resume" target="_blank">
+              <img src={assets.resume} alt="Resume" />
             </a>
         </div>
     </>

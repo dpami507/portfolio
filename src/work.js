@@ -1,37 +1,52 @@
 import { useEffect, useState } from 'react';
-import Papa from 'papaparse';
 
-const sheetCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQO_f2HDT_qROEUC6ELdTKbDmahQsaC5y03yB8F2b3sTZO6zJaUFdNNXVCEijU1gBft6mOT7ALUA0Ml/pub?gid=0&single=true&output=csv";
+const AIRTABLE_TOKEN = import.meta.env.VITE_AIRTABLE_TOKEN;
+const BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID;
+const PROJECTS_TABLE = "Projects";
+const ASSETS_TABLE = "Assets";
+
+function fetchTable(tableName) {
+  return fetch(`https://api.airtable.com/v0/${BASE_ID}/${tableName}?sort[0][field]=order&sort[0][direction]=desc`, {
+    headers: { Authorization: `Bearer ${AIRTABLE_TOKEN}` }
+  }).then(res => res.json());
+}
 
 export function useWorkList() {
   const [workList, setWorkList] = useState([]);
+  const [assets, setAssets] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    Papa.parse(sheetCSV, {
-      download: true,
-      header: true,
-      skipEmptyLines: true,
-      transform: (value, field) => {
-        // Convert string booleans
-        if (value === 'TRUE') return true;
-        if (value === 'FALSE') return false;
+    Promise.all([fetchTable(PROJECTS_TABLE), fetchTable(ASSETS_TABLE)])
+      .then(([projectsData, assetsData]) => {
+        console.log('raw assetsData:', assetsData);
+        const records = projectsData.records.map(record => ({
+          ...record.fields,
+          image: record.fields.image?.[0]?.url ?? null,
+          resume: record.fields.resume?.[0]?.url ?? null,
+        }));
 
-        return value;
-      },
-      complete: (results) => {
-        console.log('Loaded projects:', results.data);
-        setWorkList(results.data);
+        const assetMap = {};
+        assetsData.records.forEach(record => {
+          const name = record.fields.id;
+          assetMap[name] = record.fields.img?.[0]?.url ?? null;
+        });
+
+        console.log('Loaded projects:', records);
+        console.log('Loaded assets:', assetMap);
+        setWorkList(records);
+        setAssets(assetMap);
         setLoading(false);
-      },
-      error: (err) => {
-        console.error('Error loading sheet:', err);
+
+        console.log('assetMap:', assetMap);
+      })
+      .catch(err => {
+        console.error('Error loading Airtable:', err);
         setError(err);
         setLoading(false);
-      }
-    });
+      });
   }, []);
 
-  return { workList, loading, error };
+  return { workList, assets, loading, error };
 }

@@ -1,11 +1,10 @@
 import './Home.css'
 import { useWorkList } from '../work.js';
-import { getImagePath } from '../utils/helpers'
 import BoxLink from '../components/BoxLink.jsx'
 import { MdHeight } from 'react-icons/md';
 
 function Home() {
-    const { workList, loading, error } = useWorkList();
+    const { workList, assets, loading, error } = useWorkList();
 
     const items = [];
 
@@ -47,7 +46,7 @@ function Home() {
                 <p className='tech'>C++ / C# (.NET) / Git / Unity / OpenGL</p>
                 <p>Burlington, VT</p>
             </div>
-            <img src= {getImagePath('imgs/DavidAmidon.jpg')} alt="" />
+            <img src= {assets.portrait} alt="" />
             <a className='landing-jump' href="#about" style={{height: "10px"}}>
                 <span></span>
                 <span></span>

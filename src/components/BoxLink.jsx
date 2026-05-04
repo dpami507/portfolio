@@ -1,4 +1,3 @@
-import { getImagePath } from '../utils/helpers'
 import { Link } from 'react-router-dom';
 import './BoxLink.css'
 
@@ -14,7 +13,7 @@ function BoxLink({id, type, img, link, title, description, tech}) {
       to={`${dir}/${id}`}>
       <div className="card-container" onClick={link}>
         <div className="card-img">
-          <img src={getImagePath(img)} alt={title || "Project Screenshot"} loading="lazy"></img>
+          <img src={img?.[0]?.url} alt={title || "Project Screenshot"} loading="lazy"></img>
         </div>
         <div className="card-info">
           <h3>{title}</h3>

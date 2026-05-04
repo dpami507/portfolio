@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { getImagePath } from '../utils/helpers'
 import './WorkComponent.css'
 
 function WorkComponent({img, link, title, description}) {

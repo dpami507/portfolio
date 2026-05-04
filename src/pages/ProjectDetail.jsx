@@ -1,5 +1,4 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { getImagePath } from '../utils/helpers'
 import { useWorkList } from '../work';
 
 import './ProjectDetail.css'
@@ -26,7 +25,7 @@ function ProjectDetail() {
     <div className='container'>
         <div className="project-container">
             <div className='image-wrapper'>
-                <img src={getImagePath(project.img)} alt={project.title || "Project Screenshot"} loading="lazy"></img>
+                <img src={project.img?.[0]?.url} alt={project.title || "Project Screenshot"} loading="lazy"></img>
             </div>
             <h2>{project.title}</h2>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;{project.description}</p>
