@@ -27,9 +27,22 @@
 
 .image-wrapper {
   position: relative;
-  display: block;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
+
   width: 100%;
+  height: 420px; /* fixed height */
+
+  border-radius: 10px;
+
+  background-image: 
+    radial-gradient(circle, color-mix(in srgb, var(--accent2) 10%, transparent) 1px, transparent 1px),
+    radial-gradient(circle, color-mix(in srgb, var(--accent2) 10%, transparent) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
 
   -webkit-mask-image: radial-gradient(
     circle 30px at calc(15px) calc(15px),
@@ -42,22 +55,84 @@
     black 100%
   );
 
-  margin-bottom: 20px;
 }
-
 .image-wrapper img {
   display: block;
-
   border: 2px var(--accent2) solid;
   border-radius: 10px;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain; /* scales image without cropping */
+}
+
+.prev-image, .next-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  color: white;
+
+  border: none;
+  border-radius: 50%;
+
+  font-size: 1.5rem;
+
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+  z-index: 2;
+
+  transition: .2s;
+}
+.prev-image {
+  left: 10px;
+}
+.next-image {
+  right: 10px;
+}
+.prev-image:hover, .next-image:hover {
+  background-color: white;
+  color: black;
+}
+.prev-image:active, .next-image:active {
+  background-color: white;
+  color: black;
+  transform: scale(0.8);
+}
+
+.image-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+.image-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #555;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dot.active {
+    background-color: #fff;
 }
 
 .project-container > h2 {
   color: white;
   font-size: 2.5rem;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .project-container > p {
@@ -145,6 +220,9 @@
 }
 
 @media (max-width: 800px) {
+.image-wrapper {
+  height: 320px;
+}
 .project-container {
     width: 500px;
 }
@@ -165,6 +243,9 @@
 }
 
 @media (max-width: 600px) {
+.image-wrapper {
+  height: 200px;
+}
 .project-container {
     width: 300px;
 }

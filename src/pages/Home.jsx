@@ -43,7 +43,7 @@ function Home() {
             <div className='landing-text'>
                 <h1>David Amidon</h1>
                 <p className='subtitle'>Game Programming Student</p>
-                <p className='tech'>C++ / C# (.NET) / Git / Unity / OpenGL</p>
+                <p className='tech'>C++ / C# (.NET) / Git / Unity / OpenGL / SDL3 / ASIO</p>
                 <p>Burlington, VT</p>
             </div>
             <img src= {assets.portrait} alt="" />

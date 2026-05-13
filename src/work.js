@@ -20,7 +20,6 @@ export function useWorkList() {
   useEffect(() => {
     Promise.all([fetchTable(PROJECTS_TABLE), fetchTable(ASSETS_TABLE)])
       .then(([projectsData, assetsData]) => {
-        console.log('raw assetsData:', assetsData);
         const records = projectsData.records.map(record => ({
           ...record.fields,
           image: record.fields.image?.[0]?.url ?? null,
@@ -33,13 +32,10 @@ export function useWorkList() {
           assetMap[name] = record.fields.img?.[0]?.url ?? null;
         });
 
-        console.log('Loaded projects:', records);
-        console.log('Loaded assets:', assetMap);
         setWorkList(records);
         setAssets(assetMap);
         setLoading(false);
 
-        console.log('assetMap:', assetMap);
       })
       .catch(err => {
         console.error('Error loading Airtable:', err);

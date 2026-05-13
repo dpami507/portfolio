@@ -60,7 +60,7 @@ a {
 
 .card-info h3 
 {
-  height: 20%;
+  height: 25%;
   
   overflow: hidden;
   white-space: nowrap;
@@ -74,13 +74,13 @@ a {
 }
 .card-info p 
 {
-  height: 60%;
+  height: 55%;
   
   overflow: hidden;
   -webkit-mask-image: linear-gradient(black 75%, transparent 100%);
   
   margin: 0;
-  padding: 10px 10px;
+  padding: 0px 10px;
 
   font-weight: normal;
 
