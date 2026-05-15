@@ -78,7 +78,7 @@ function Home() {
         <div className="line"></div>
 
         <div id='tech-stack'>
-            <h2>Tech Stack</h2>
+            <h2>Skills</h2>
             <div className='skills-icons'>
                 {skillsList}
             </div>
