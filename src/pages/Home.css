@@ -52,7 +52,6 @@
   justify-content: center;
   margin: 0;
   padding: 2rem 1rem;
-  color: white;
   text-align: center;
 }
 
@@ -61,6 +60,8 @@
   font-size: 2.5vw;
   margin-top: 20px;
   margin-bottom: 20px;
+
+  color: white;
 }
 
 #about p {
@@ -68,6 +69,35 @@
   font-size: 1.25vw;
   width: 60vw;
   line-height: 1.6;
+
+  color: white;
+}
+
+#tech-stack {
+  width: 100%;
+  min-height: 50svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 2rem 1rem;
+}
+#tech-stack h2 {
+  font-weight: 500;
+  font-size: 2.5vw;
+
+  color: white;
+}
+#tech-stack .skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    max-width: 1200px;
+
+    width: 80%;
 }
 
 .recentwork {

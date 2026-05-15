@@ -1,0 +1,39 @@
+.skill-icon {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+
+    transition: transform 0.1s;
+}
+.skill-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 5px;
+
+    transition: transform 0.2s;
+}
+.skill-icon p {
+    position: absolute;
+
+    line-height: 80px;
+    height: 100%;
+    bottom: -60px;
+
+    font-size: 24px;
+    text-align: center;
+    text-wrap-mode: nowrap;
+
+    color: rgb(255, 255, 255, 0);
+
+    transition: 0.1s;
+}
+.skill-icon:hover img {
+    transform: scale(1.1);
+}
+.skill-icon:hover p {
+    color: rgb(255, 255, 255, 1);
+}   

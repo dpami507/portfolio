@@ -1,20 +1,25 @@
 import './Home.css'
 import { useWorkList } from '../work.js';
-import BoxLink from '../components/BoxLink.jsx'
 import { MdHeight } from 'react-icons/md';
 
+import BoxLink from '../components/BoxLink.jsx'
+import SkillIcon from '../components/SkillIcon.jsx';
+
 function Home() {
-    const { workList, assets, loading, error } = useWorkList();
+    const { workList, assets, skills,  loading, error } = useWorkList();
 
     const items = [];
+    const skillsList = [];
 
     if(loading)
     {
         items.push(<div className="loading">Loading content...</div>);
+        skillsList.push(<div className="loading">Loading skills...</div>);
     }
     if(error)
     {
         items.push(<div className="error">Error loading content</div>);
+        skillsList.push(<div className="error">Error loading skills</div>);
     }
 
     if(!loading && !error) {
@@ -35,6 +40,16 @@ function Home() {
                 />
             );
         }
+        for(const skill in skills)
+        {
+            skillsList.push(
+                <SkillIcon
+                key={skill}
+                skill={{name: skill, img: skills[skill]}}
+                />
+            );
+        }
+
     }
 
   return (
@@ -46,7 +61,7 @@ function Home() {
                 <p className='tech'>C++ / C# (.NET) / Git / Unity / OpenGL / SDL3 / ASIO</p>
                 <p>Burlington, VT</p>
             </div>
-            <img src= {assets.portrait} alt="" />
+            <img src= "DavidAmidon.jpg" alt="" />
             <a className='landing-jump' href="#about" style={{height: "10px"}}>
                 <span></span>
                 <span></span>
@@ -58,6 +73,15 @@ function Home() {
             <p>I'm David Amidon, a Game Programming student at Champlain College, working primarily in C++, C#, and Unity.</p>
             <p>I enjoy building games and figuring out how to make things work the way I want them to. I like the problem-solving side of development and working with others on creative projects.</p>
             <p>Currently looking for internship and entry-level opportunities in game programming and software development.</p>
+        </div>
+
+        <div className="line"></div>
+
+        <div id='tech-stack'>
+            <h2>Tech Stack</h2>
+            <div className='skills-icons'>
+                {skillsList}
+            </div>
         </div>
 
         <div className="line"></div>
