@@ -15,7 +15,7 @@ function Contact() {
 
                 <div className='contactIcons'>
                     <a href="mailto:david.amidon@mymail.champlain.edu" target='_blank'><FaEnvelope size={24} /></a>
-                    <a href="https://www.linkedin.com/in/dpamidon/" target='_blank'><FaLinkedin size={24} /></a>
+                    <a href="https://www.linkedin.com/in/davidpamidon/" target='_blank'><FaLinkedin size={24} /></a>
                     <a href="https://github.com/dpami507" target='_blank'><FaGithub size={24} /></a>
                 </div>
             </div>
