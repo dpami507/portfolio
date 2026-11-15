@@ -40,14 +40,16 @@ function Home() {
                 />
             );
         }
-        for(const skill in skills)
-        {
-            skillsList.push(
-                <SkillIcon
-                key={skill}
-                skill={{name: skill, img: skills[skill]}}
-                />
-            );
+        for (let i = 0; i < 2; i++) {
+            for(const skill in skills)
+            {
+                skillsList.push(
+                    <SkillIcon
+                        key={skill}
+                        skill={{name: skill, img: skills[skill]}}
+                    />
+                );
+            }
         }
 
     }
@@ -57,7 +59,7 @@ function Home() {
         <div className='landing'>
             <div className='landing-text'>
                 <h1>David Amidon</h1>
-                <p className='subtitle'>Game Programming Student</p>
+                <p className='subtitle'>Game Programming BS | Computer Science Major</p>
                 <p className='tech'>C++ / C# (.NET) / Git / Unity / OpenGL / SDL3 / ASIO</p>
                 <p>Burlington, VT</p>
             </div>
@@ -73,14 +75,11 @@ function Home() {
             <p>I'm David Amidon, a Game Programming student at Champlain College, working primarily in C++, C#, and Unity.</p>
             <p>I enjoy building games and figuring out how to make things work the way I want them to. I like the problem-solving side of development and working with others on creative projects.</p>
             <p>Currently looking for internship and entry-level opportunities in game programming and software development.</p>
-        </div>
 
-        <div className="line"></div>
-
-        <div id='tech-stack'>
-            <h2>Skills</h2>
-            <div className='skills-icons'>
-                {skillsList}
+            <div className='skills-mask'>
+                <div className='skills-icons'>
+                    {skillsList}
+                </div>
             </div>
         </div>
 
