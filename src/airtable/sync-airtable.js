@@ -24,6 +24,12 @@ function writeHeader(header) {
     console.log("==================================");
 }
 
+function toPublicUrl(dest) {
+    return '/' + path.relative('public', dest)
+        .split(path.sep)
+        .map(encodeURIComponent)
+        .join('/');
+}
 async function fetchTable(table) {
     return fetch(`https://api.airtable.com/v0/${BASE_ID}/${table}?sort[0][field]=order&sort[0][direction]=desc`, {
         headers: { Authorization: `Bearer ${AIRTABLE_TOKEN}` }
@@ -74,7 +80,7 @@ async function writeProjects() {
             imageCount++;
 
             // Add image to JSON
-            createdProject.imgs.push(dest);
+            createdProject.imgs.push(toPublicUrl(dest));
         }
 
         // Write JSON
@@ -106,7 +112,7 @@ async function writeSkills() {
         const dest = await downloadImage(image.url, BASE_DIR + SKILL_IMG_DIR, `${image.filename}`);
         console.log(`Downloaded ${path.resolve(dest)}`);
         // Add image to JSON
-        createdSkill.img = dest;
+        createdSkill.img = toPublicUrl(dest);
 
         // Write JSON
         skills.push(createdSkill);
@@ -138,20 +144,18 @@ async function writeAssets() {
         console.log(`Downloaded ${path.resolve(dest)}`);
 
         // Add image to JSON
-        createdAsset.img = dest;
+        createdAsset.img = toPublicUrl(dest);
 
         // Write JSON
         assets.push(createdAsset);
         await writeFile(BASE_DIR + ASSET_FILE, JSON.stringify(assets, null, 2));
-        console.log(`Created '${createdAsset.skill}' asset`);
+        console.log(`Created '${createdAsset.id}' asset`);
     }
     console.log(`Finished: ${assets.length} assets created`);
 }
 
 async function deleteFiles(path) {
-    rm(path, { recursive: true, force: true }, (err) => {
-        if (err) throw err;
-    });
+    await rm(path, { recursive: true, force: true });
     console.log(`'${path}' cleared`);
 }
 
