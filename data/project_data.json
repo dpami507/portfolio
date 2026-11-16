@@ -1,0 +1,400 @@
+[
+  {
+    "id": "spotify-universe",
+    "title": "Spotify Universe",
+    "type": "project",
+    "link_type": "Github",
+    "link": "https://dpami507.github.io/spotifyuniverse/",
+    "description": "React App to visualize Spotify listening data. Visualizes the data by having individual nodes for every artist and linking the songs they are credited with to them. Songs that share artists have multiple connections to each artist. Shows most played songs and artists via play time and song count. Uses the JSON files received when requesting Extended Streaming History from spotify. ",
+    "tech": [
+      "React",
+      "Java Script",
+      "Git"
+    ],
+    "role": "Solo Project",
+    "date": "Fall 2026",
+    "imgs": [
+      "public\\data\\project_imgs\\Spotify Universe_0_image.png",
+      "public\\data\\project_imgs\\Spotify Universe_1_image.png",
+      "public\\data\\project_imgs\\Spotify Universe_2_image.png",
+      "public\\data\\project_imgs\\Spotify Universe_3_image.png"
+    ]
+  },
+  {
+    "id": "runaway-bomber",
+    "title": "Runaway Bomber",
+    "type": "game",
+    "link_type": "Itch.io",
+    "link": "https://dpami507.itch.io/runaway-bomber",
+    "description": "3D timed trial platformer game created in Unity for the 2026 GMTK Game Jam. Created all game mechanics and features within the three-day time limit. Used post-processing and shader effects to create a retro-like appearance, while still allowing for clear visuals and satisfying gameplay.\n",
+    "tech": [
+      "C#",
+      "Unity",
+      "Git"
+    ],
+    "role": "Solo Project",
+    "date": "Summer 2026",
+    "imgs": [
+      "public\\data\\project_imgs\\Runaway Bomber_0_logo.png",
+      "public\\data\\project_imgs\\Runaway Bomber_1_Screenshot 2026-07-26 124128.png",
+      "public\\data\\project_imgs\\Runaway Bomber_2_Screenshot 2026-07-26 124213.png",
+      "public\\data\\project_imgs\\Runaway Bomber_3_Screenshot 2026-07-26 124227.png",
+      "public\\data\\project_imgs\\Runaway Bomber_4_Screenshot 2026-07-26 124246.png",
+      "public\\data\\project_imgs\\Runaway Bomber_5_Screenshot 2026-07-26 124305.png"
+    ]
+  },
+  {
+    "id": "resaturator",
+    "title": "Resaturator",
+    "type": "game",
+    "link_type": "Itch.io",
+    "link": "https://dpami507.itch.io/resaturator",
+    "description": "Created a Dungeon-Crawler game in Unity for the Game Dev Cafe Game Jam. Created features of the game within the span of two weeks, this includes, dungeon generation, player upgrade system, gameplay loop, and various game assets.",
+    "tech": [
+      "C#",
+      "Unity",
+      "Git"
+    ],
+    "role": "Solo Project",
+    "date": "Summer 2026",
+    "imgs": [
+      "public\\data\\project_imgs\\Resaturator_0_logo.png",
+      "public\\data\\project_imgs\\Resaturator_1_Screenshot 2026-06-13 142443.png",
+      "public\\data\\project_imgs\\Resaturator_2_Screenshot 2026-06-13 142529.png",
+      "public\\data\\project_imgs\\Resaturator_3_Screenshot 2026-06-13 142346.png",
+      "public\\data\\project_imgs\\Resaturator_4_Screenshot 2026-06-13 143031.png",
+      "public\\data\\project_imgs\\Resaturator_5_Screenshot 2026-06-13 142416.png"
+    ]
+  },
+  {
+    "id": "drifting-game",
+    "title": "Drifiting Game",
+    "type": "game",
+    "description": "Created a full game loop of a collectathon game using SDL3, building systems up from scratch. Worked on a collision system using the Separating Axis Theorem, a player save-and-load system, saving different types of data to files, and created a sound system for playing sounds using SDL3 audio functions, with object pools to play multiple streams at once.",
+    "tech": [
+      "C++",
+      "SDL3",
+      "SVN"
+    ],
+    "role": "Team Member",
+    "date": "Spring 2026",
+    "imgs": [
+      "public\\data\\project_imgs\\Drifiting Game_0_DriftingGame.png"
+    ]
+  },
+  {
+    "id": "network-lobby",
+    "title": "Network Lobby System",
+    "type": "project",
+    "description": "Created a lobby system similar to Among Us, using room codes to connect and join friends' rooms. Acted as lead network developer, creating the backend network systems for the server, client, and room logic. It was built using the Boost Asio C++ library for networking and SDL3 for the front end. Players can create and join other rooms as well as search for public rooms to join.",
+    "tech": [
+      "C++",
+      "SDL3",
+      "Boost Asio",
+      "Git"
+    ],
+    "role": "Team Member",
+    "date": "Spring 2026",
+    "imgs": [
+      "public\\data\\project_imgs\\Network Lobby System_0_LobbySystem.png"
+    ]
+  },
+  {
+    "id": "within-nets-reach",
+    "title": "Within Nets Reach",
+    "type": "game",
+    "link_type": "Itch.io",
+    "link": "https://stevendownerjr.itch.io/within-nets-reach",
+    "description": "Within Nets Reach is an educational fishing game built in the Unity Game Engine. Created main player systems, including controls, item shop, level loading, and menus. Served as the lead programmer on a team of 4 over the course of 6 weeks, implementing and updating systems in the game to allow for a balance of learning and fun for the player.",
+    "tech": [
+      "C#",
+      "Unity",
+      "Scrum/Agile",
+      "Git"
+    ],
+    "role": "Team Member",
+    "date": "Spring 2026",
+    "imgs": [
+      "public\\data\\project_imgs\\Within Nets Reach_0_WNR.png",
+      "public\\data\\project_imgs\\Within Nets Reach_1_uOJJGP.png",
+      "public\\data\\project_imgs\\Within Nets Reach_2_QRhxcQ.png",
+      "public\\data\\project_imgs\\Within Nets Reach_3_Cjen8o.png",
+      "public\\data\\project_imgs\\Within Nets Reach_4_EunPkX.png",
+      "public\\data\\project_imgs\\Within Nets Reach_5_viHw_W.png"
+    ]
+  },
+  {
+    "id": "gone-bananas",
+    "title": "Gone Bananas!",
+    "type": "game",
+    "link_type": "Itch.io",
+    "link": "https://stevendownerjr.itch.io/gone-bananas",
+    "description": "Gone Bananas is an exploration, collectathon game built in the Unity Game Engine. Architected the quest and inventory systems from scratch using Scriptable Objects for items, quests, resources, and audio — enabling modular, data-driven game logic across the project. Served as lead programmer on a team of 4 over the course of 4 weeks, implementing all core gameplay systems from documentation, including player movement, camera, UI, and enemy AI.",
+    "tech": [
+      "C#",
+      "Unity",
+      "Git",
+      "Scrum/Agile"
+    ],
+    "role": "Team Member",
+    "date": "Spring 2026",
+    "imgs": [
+      "public\\data\\project_imgs\\Gone Bananas!_0_GoneBananas.png",
+      "public\\data\\project_imgs\\Gone Bananas!_1_YtNEYX.png",
+      "public\\data\\project_imgs\\Gone Bananas!_2_EmvIrG.png",
+      "public\\data\\project_imgs\\Gone Bananas!_3_qmED6l.png",
+      "public\\data\\project_imgs\\Gone Bananas!_4_mijO2Z.png",
+      "public\\data\\project_imgs\\Gone Bananas!_5_cW+ACA.png"
+    ]
+  },
+  {
+    "id": "terrain-generation",
+    "title": "Terrain Generation",
+    "type": "project",
+    "link_type": "Github",
+    "link": "https://github.com/dpami507/gpr200-final",
+    "description": "Procedural Terrain generator built in OpenGL with real-time rendering. Implemented the Perlin noise algorithm for height mapping and calculated normals from the height data for lighting. Created a height-based texture blending system. Built a modifiable terrain system that integrated with teammates' raycasting implementation.",
+    "tech": [
+      "C++",
+      "OpenGL",
+      "Git"
+    ],
+    "role": "Team Member",
+    "date": "Fall 2025",
+    "imgs": [
+      "public\\data\\project_imgs\\Terrain Generation_0_genExample.png",
+      "public\\data\\project_imgs\\Terrain Generation_1_smileExample.png"
+    ]
+  },
+  {
+    "id": "chess-bot",
+    "title": "Chess Bot",
+    "type": "project",
+    "link_type": "Github",
+    "link": "https://github.com/dpami507/chess-competition",
+    "description": "Chess AI built in C++ with alpha-beta pruning for competitive play. Implemented minimax algorithm foundation and initial board evaluation heuristics, achieving 4-ply search depth within hardware constraints. Collaborated with 2 developers on alpha-beta pruning optimization and advanced heuristic implementation.",
+    "tech": [
+      "C++",
+      "Git"
+    ],
+    "role": "Team Member",
+    "date": "Fall 2025",
+    "imgs": [
+      "public\\data\\project_imgs\\Chess Bot_0_Board.png"
+    ]
+  },
+  {
+    "id": "thunderbird-4",
+    "title": "Thunderbird 4",
+    "type": "art",
+    "link_type": "Browser",
+    "description": "3D model of Thunderbird 4 submarine from 'Thunderbirds Are Go!' (2015). Modeled in Blender with custom metallic hull shaders. Created underwater environment using volumetric lighting, caustics, and atmospheric effects.",
+    "tech": [
+      "Blender"
+    ],
+    "role": "Solo Project",
+    "date": "Summer 2025",
+    "imgs": [
+      "public\\data\\project_imgs\\Thunderbird 4_0_Thunderbird4_07.png"
+    ]
+  },
+  {
+    "id": "killerbeatz",
+    "title": "KillerBeatz",
+    "type": "game",
+    "link_type": "Itch.io",
+    "link": "https://dpami507.itch.io/killerbeatz",
+    "description": "Rhythm-action game built in 5 days for GMTK Game Jam 2025. Designed loop-based combat where drum patterns create recurring attack pulses synchronized to beat timing. Implemented expanding circle collider detection with particle VFX for beat visualization in Unity. Shipped a fully playable game on deadline.",
+    "tech": [
+      "C#",
+      "Unity"
+    ],
+    "role": "Solo Project",
+    "date": "Summer 2025",
+    "imgs": [
+      "public\\data\\project_imgs\\KillerBeatz_0_KB.png",
+      "public\\data\\project_imgs\\KillerBeatz_1_chthHi.png",
+      "public\\data\\project_imgs\\KillerBeatz_2_xp_6JI.png"
+    ]
+  },
+  {
+    "id": "little-guy-grove",
+    "title": "Little Guy Grove",
+    "type": "game",
+    "link_type": "Browser",
+    "link": "https://web.archive.org/web/20250428174405/https:/www.littleguygrove.com/",
+    "description": "Led 4-person team for campus-wide ARG at Champlain College. Designed and maintained an interactive website using Wix, managing weekly content updates and puzzle additions. Coordinated with narrative, art, and puzzle teams to ensure cohesive player experience across 6-week event.",
+    "tech": [
+      "Wix"
+    ],
+    "role": "Team Lead",
+    "date": "Spring 2025",
+    "imgs": [
+      "public\\data\\project_imgs\\Little Guy Grove_0_Sound_2.png"
+    ]
+  },
+  {
+    "id": "tanks-card-game",
+    "title": "TANKS: Card Edition",
+    "type": "game",
+    "link_type": "Github",
+    "link": "https://dpami507.github.io/GMD200_GridGame_DA/",
+    "description": "Grid-based strategy game featuring card-driven tank actions. Implemented modular card system using Unity’s Scriptable Objects for reusable game logic. Designed grid navigation and turn-based combat with randomized deck mechanics.",
+    "tech": [
+      "C#",
+      "Unity",
+      "Git"
+    ],
+    "role": "Solo Project",
+    "date": "Spring 2025",
+    "imgs": [
+      "public\\data\\project_imgs\\TANKS: Card Edition_0_Tanks.png"
+    ]
+  },
+  {
+    "id": "charlies-adventure",
+    "title": "Charlie's Adventure",
+    "type": "game",
+    "link_type": "Github",
+    "link": "https://dpami507.github.io/GMD200_Platformer_DA/",
+    "description": "2D platformer with collectibles, moving platforms, and environmental hazards. Created immersive cave atmosphere using Unity's 2D lighting, ambient sound design, and dynamic music system. Focused on responsive movement controls and visual polish.",
+    "tech": [
+      "C#",
+      "Unity",
+      "Git"
+    ],
+    "role": "Solo Project",
+    "date": "Spring 2025",
+    "imgs": [
+      "public\\data\\project_imgs\\Charlie's Adventure_0_CharliesAdventure.png"
+    ]
+  },
+  {
+    "id": "grappler-cube-of-power",
+    "title": "Grapple Cube of Power",
+    "type": "game",
+    "link_type": "Github",
+    "link": "https://dpami507.github.io/GMD200_ArcadeShooter_DA/",
+    "description": "2D arcade shooter featuring grappling-hook movement and varied enemy encounters. Implemented physics-based grappling using Unity’s Spring Joint 2D and Rigidbody components. Created multiple enemy types and a boss fight triggered by score threshold.",
+    "tech": [
+      "C#",
+      "Unity",
+      "Git"
+    ],
+    "role": "Solo Project",
+    "date": "Spring 2025",
+    "imgs": [
+      "public\\data\\project_imgs\\Grapple Cube of Power_0_GrappleCupeOfPower.png"
+    ]
+  },
+  {
+    "id": "john-and-friend",
+    "title": "John + Friend Office Crusade",
+    "type": "game",
+    "link_type": "Itch.io",
+    "link": "https://dpami507.itch.io/john-friend-office-crusade",
+    "description": "2D Arcade shoot ‘em up game featuring wave-based enemy spawning and player progression system. Implemented object pooling to support 200+ concurrent enemies at a framerate. Designed escalating difficulty with varied enemy types. Collaborated with teammate on upgrade implementation.",
+    "tech": [
+      "C#",
+      "Unity",
+      "Git"
+    ],
+    "role": "Team Member",
+    "date": "Fall 2024",
+    "imgs": [
+      "public\\data\\project_imgs\\John + Friend Office Crusade_0_JFOC.png"
+    ]
+  },
+  {
+    "id": "thunderbird-3",
+    "title": "Thunderbird 3",
+    "type": "art",
+    "link_type": "Browser",
+    "description": "3D model of Thunderbird 3 spacecraft from 'Thunderbirds Are Go!' (2015). Modeled in Blender with volumetric smoke simulations for rocket booster exhaust trails. Created space environment using a custom skybox.",
+    "tech": [
+      "Blender"
+    ],
+    "role": "Solo Project",
+    "date": "Summer 2024",
+    "imgs": [
+      "public\\data\\project_imgs\\Thunderbird 3_0_Thunderbird3_010.png"
+    ]
+  },
+  {
+    "id": "pyromaniac-penguins",
+    "title": "Pyromaniac Penguins",
+    "type": "art",
+    "link_type": "Browser",
+    "description": "3D model of a penguin in a flamethrower chair with a drone companion. Modeled in Blender using volumetric flame simulations. Used curve modeling for detailed pipes, wires, and structural components.",
+    "tech": [
+      "Blender"
+    ],
+    "role": "Solo Project",
+    "date": "Summer 2024",
+    "imgs": [
+      "public\\data\\project_imgs\\Pyromaniac Penguins_0_PyromaniacPenguins.png"
+    ]
+  },
+  {
+    "id": "thunderbird-2",
+    "title": "Thunderbird 2",
+    "type": "art",
+    "link_type": "Browser",
+    "description": "3D model of Thunderbird 2 cargo ship from 'Thunderbirds Are Go!' (2015). Modeled in Blender with volumetric smoke simulations for sand kicked up by thrusters. Created custom emission shaders for engine effects.",
+    "tech": [
+      "Blender"
+    ],
+    "role": "Solo Project",
+    "date": "Summer 2024",
+    "imgs": [
+      "public\\data\\project_imgs\\Thunderbird 2_0_Thunderbird2_003.png"
+    ]
+  },
+  {
+    "id": "suits",
+    "title": "Suits",
+    "type": "art",
+    "link_type": "Browser",
+    "description": "3D model of tailored suit created in Blender from sewing pattern templates. Used cloth simulation to assemble pattern pieces with realistic seams and draping. Modeled accurate fit and fabric behavior.",
+    "tech": [
+      "Blender"
+    ],
+    "role": "Solo Project",
+    "date": "Summer 2024",
+    "imgs": [
+      "public\\data\\project_imgs\\Suits_0_Suit4.png",
+      "public\\data\\project_imgs\\Suits_1_Suit3.png",
+      "public\\data\\project_imgs\\Suits_2_Suit5.png"
+    ]
+  },
+  {
+    "id": "tardis-interior",
+    "title": "TARDIS Interior",
+    "type": "art",
+    "link_type": "Browser",
+    "description": "Custom TARDIS interior console room design modeled in Blender. Created detailed mechanical components, brass fixtures, and control panel instrumentation. Implemented custom emission shaders with animated lighting sequences.",
+    "tech": [
+      "Blender"
+    ],
+    "role": "Solo Project",
+    "date": "Summer 2024",
+    "imgs": [
+      "public\\data\\project_imgs\\TARDIS Interior_0_DoorShot4K.png"
+    ]
+  },
+  {
+    "id": "thunderbird-1",
+    "title": "Thunderbird 1",
+    "type": "art",
+    "link_type": "Browser",
+    "description": "3D model of Thunderbird 1 hypersonic rocket from 'Thunderbirds Are Go!' (2015). Modeled in Blender with volumetric materials for thruster effects. Created a grass environment using Blender's particle system.",
+    "tech": [
+      "Blender"
+    ],
+    "role": "Solo Project",
+    "date": "Summer 2024",
+    "imgs": [
+      "public\\data\\project_imgs\\Thunderbird 1_0_Thunderbird1_003.png"
+    ]
+  }
+]
