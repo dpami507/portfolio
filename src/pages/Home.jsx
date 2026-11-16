@@ -1,57 +1,47 @@
 import './Home.css'
-import { useWorkList } from '../work.js';
+import {getAssets, getProjects, getSkills} from '../work.js';
+
 import { MdHeight } from 'react-icons/md';
 
 import BoxLink from '../components/BoxLink.jsx'
 import SkillIcon from '../components/SkillIcon.jsx';
 
 function Home() {
-    const { workList, assets, skills,  loading, error } = useWorkList();
+
+    const projects = getProjects();
+    const skills = getSkills();
+    const assets = getAssets();
 
     const items = [];
     const skillsList = [];
 
-    if(loading)
-    {
-        items.push(<div className="loading">Loading content...</div>);
-        skillsList.push(<div className="loading">Loading skills...</div>);
+    for (let i = 0; i < 3; i++) {
+        items.push(
+            <BoxLink
+                key={projects[i].id}
+                id={projects[i].id}
+                type={projects[i].type}
+                img={projects[i].imgs[0]}
+                link={projects[i].link}
+                link_type={projects[i].link_type}
+                title={projects[i].title}
+                description={projects[i].description}
+                tech={projects[i].tech}
+                role={projects[i].role}
+                date={projects[i].date}
+            />
+        );
     }
-    if(error)
-    {
-        items.push(<div className="error">Error loading content</div>);
-        skillsList.push(<div className="error">Error loading skills</div>);
-    }
-
-    if(!loading && !error) {
-        for (let i = 0; i < 3; i++) {
-            items.push(
-                <BoxLink 
-                key={workList[i].id}
-                id={workList[i].id}
-                type={workList[i].type}
-                img={workList[i].img} 
-                link={workList[i].link} 
-                link_type={workList[i].link_type}
-                title={workList[i].title} 
-                description={workList[i].description}
-                tech={workList[i].tech}
-                role={workList[i].role}
-                date={workList[i].date}
+    for(let c = 0; c < 2; c++) {
+        for (let i = 0; i < skills.length; i++) {
+            skillsList.push(
+                <SkillIcon
+                    key={skills[i].skill + c}
+                    skill={skills[i].skill}
+                    img={skills[i].img}
                 />
             );
         }
-        for (let i = 0; i < 2; i++) {
-            for(const skill in skills)
-            {
-                skillsList.push(
-                    <SkillIcon
-                        key={skill}
-                        skill={{name: skill, img: skills[skill]}}
-                    />
-                );
-            }
-        }
-
     }
 
   return (
@@ -63,7 +53,7 @@ function Home() {
                 <p className='tech'>C++ / C# (.NET) / Git / Unity / OpenGL / SDL3 / ASIO</p>
                 <p>Burlington, VT</p>
             </div>
-            <img src= "DavidAmidon.jpg" alt="" />
+            <img src={assets['portrait']} alt="Image of me" />
             <a className='landing-jump' href="#about" style={{height: "10px"}}>
                 <span></span>
                 <span></span>

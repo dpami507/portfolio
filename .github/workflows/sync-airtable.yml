@@ -1,0 +1,26 @@
+name: Sync Airtable
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Fetch from Airtable
+        env:
+          VITE_AIRTABLE_TOKEN: ${{ secrets.VITE_AIRTABLE_TOKEN }}
+          VITE_AIRTABLE_BASE_ID: ${{ secrets.VITE_AIRTABLE_BASE_ID }}
+        run: node src/airtable/sync-airtable.js
+      - name: Commit changes
+        run: |
+          git config user.name "airtable-sync"
+          git config user.email "actions@github.com"
+          git add -A src/data public/airtable-images
+          git diff --staged --quiet || (git commit -m "Sync from Airtable" && git push)

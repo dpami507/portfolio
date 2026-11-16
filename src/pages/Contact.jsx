@@ -1,10 +1,10 @@
 import './Contact.css'
 import Heading from '../components/Heading.jsx'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { useWorkList } from '../work.js';
+import {getAssets} from "../work.js";
 
 function Contact() {
-    const { workList, assets, skills, loading, error } = useWorkList();
+    const assets = getAssets();
 
     return (
     <>
@@ -23,7 +23,7 @@ function Contact() {
             <div className="border_line"></div>
 
             <a href="https://drive.google.com/file/d/1-_TowS3IwQnTeMnhOMAtZvo4yRy4kjvAhN3BFHFZuaU/view" className="resume" target="_blank">
-              <img src={assets.resume} alt="Resume" />
+                <img src={assets['resume']} alt="Resume" />
             </a>
         </div>
     </>

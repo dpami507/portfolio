@@ -1,38 +1,47 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { useWorkList } from '../work';
+import {getProjects} from '../work';
 import { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import './ProjectDetail.css'
 
 function ProjectDetail() {
     const { projectId } = useParams();
-    const { workList, assets, skills, loading, error } = useWorkList();
     const navigate = useNavigate();
 
+    const [projects, setProjects] = useState([])
+    const [loading, setLoading] = useState(true);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    // All hooks must come before any conditional returns
-    const project = workList.find(proj => proj.id === projectId);
-
+    useEffect(() => {
+        const load = async () => {
+            const loadedProjects = await getProjects();
+            setProjects(loadedProjects);
+            setLoading(false);
+        }
+        load();
+    })
     useEffect(() => {
         setCurrentImageIndex(0); // reset when project changes
     }, [projectId]);
 
-    if (loading) return <div className="loading">Loading project...</div>;
-    if (!project) return <div className="loading">Project not found.</div>;
-
-    // Derive src directly — no need for a separate src state
-    const src = project.img?.[currentImageIndex]?.url || "";
-
-    function goToNextImage() {
-        if (project.img?.length > 1) {
-            setCurrentImageIndex(prev => (prev + 1) % project.img.length);
-        }
+    if(loading){
+        return (<></>)
     }
 
+    // All hooks must come before any conditional returns
+    const project = projects.find(proj => proj.id === projectId);
+
+    // Derive src directly — no need for a separate src state
+    const src = "..\\" + project.imgs[currentImageIndex] || "";
+
+    function goToNextImage() {
+        if (project.imgs?.length > 1) {
+            setCurrentImageIndex(prev => (prev + 1) % project.imgs.length);
+        }
+    }
     function goToPrevImage() {
-        if (project.img?.length > 1) {
-            setCurrentImageIndex(prev => (prev - 1 + project.img.length) % project.img.length);
+        if (project.imgs?.length > 1) {
+            setCurrentImageIndex(prev => (prev - 1 + project.imgs.length) % project.imgs.length);
         }
     }
 
@@ -56,11 +65,11 @@ function ProjectDetail() {
                     <img src={src} alt={project.title || "Project Screenshot"} loading="lazy" />
                 </div>
 
-                {project.img?.length > 1 && (
+                {project.imgs?.length > 1 && (
                     <div className='image-nav'>
                         <button className='prev-image' onClick={goToPrevImage}><FaChevronLeft size={18} /></button>
                         <div className='image-dots'>
-                            {project.img.map((_, i) => (
+                            {project.imgs.map((_, i) => (
                                 <span
                                     key={i}
                                     className={`dot ${i === currentImageIndex ? 'active' : ''}`}

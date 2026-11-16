@@ -1,40 +1,39 @@
 import './Home.css'
-import { useWorkList } from '../work.js';
+import {getProjects} from '../work.js';
 
 import Heading from '../components/Heading.jsx'
 import BoxLink from '../components/BoxLink.jsx';
+import {useEffect, useState} from "react";
 
 function Art() {
-    const { workList, assets, skills, loading, error } = useWorkList();
+
+    const [projects, setProjects] = useState([])
+    useEffect(() => {
+        const load = async () => {
+            const loadedProjects = await getProjects();
+            setProjects(loadedProjects);
+        }
+        load();
+    })
 
     const items = [];
-
-    if(loading)
-    {
-        items.push(<div className="loading">Loading art...</div>);
-    }
-    if(error)
-    {
-        items.push(<div className="error">Error loading art</div>);
-    }
-
-    for (let i = 0; i < workList.length; i++) {
-        if(workList[i].type !== "art") continue;
-            items.push(
-                <BoxLink 
-                key={workList[i].id}
-                id={workList[i].id}
-                type={workList[i].type}
-                img={workList[i].img} 
-                link={workList[i].link} 
-                link_type={workList[i].link_type}
-                title={workList[i].title} 
-                description={workList[i].description}
-                tech={workList[i].tech}
-                role={workList[i].role}
-                date={workList[i].date}
-                />
-            );
+    for (let i = 0; i < projects.length; i++) {
+        if (projects[i].type !== "art") continue;
+        items.push(
+            <BoxLink
+                key={projects[i].id}
+                id={projects[i].id}
+                type={projects[i].type}
+                img={projects[i].imgs[0]}
+                link={projects[i].link}
+                link_type={projects[i].link_type}
+                title={projects[i].title}
+                description={projects[i].description}
+                tech={projects[i].tech}
+                role={projects[i].role}
+                date={projects[i].date}
+            />
+        );
     }
 
     return (

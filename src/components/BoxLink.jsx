@@ -11,9 +11,9 @@ function BoxLink({id, type, img, link, title, description, tech}) {
     <Link
       key={id} 
       to={`${dir}/${id}`}>
-      <div className="card-container" onClick={link}>
+      <div className="card-container">
         <div className="card-img">
-          <img src={img?.[0]?.url} alt={title || "Project Screenshot"} loading="lazy"></img>
+          <img src={img} alt={title || "Project Screenshot"} loading="lazy"></img>
         </div>
         <div className="card-info">
           <h3>{title}</h3>
@@ -27,7 +27,7 @@ function BoxLink({id, type, img, link, title, description, tech}) {
               </ul>
             </div>
             <div className="see-more">
-              <a onClick={link}>See More</a>
+              <p>See More</p>
             </div>
           </div>
         </div>

@@ -1,10 +1,11 @@
 import './SkillIcon.css'
 
-function SkillIcon({ skill }) {
+function SkillIcon({ skill, img }) {
+    const src = `../${img}`;
     return (
         <div className="skill-icon">
-            <img src={skill.img} alt={`${skill.name} icon`} />
-            <p>{skill.name}</p>
+            <img src={img} alt={`${skill} icon`} />
+            <p>{skill}</p>
         </div>
     );
 }

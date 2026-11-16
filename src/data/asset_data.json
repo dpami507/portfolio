@@ -1,0 +1,14 @@
+[
+  {
+    "id": "no-photo",
+    "img": "src\\data\\asset_imgs\\NoPhoto.png"
+  },
+  {
+    "id": "resume",
+    "img": "src\\data\\asset_imgs\\David Amidon - Resume (May 2026).png"
+  },
+  {
+    "id": "portrait",
+    "img": "src\\data\\asset_imgs\\DavidAmidon.jpg"
+  }
+]
