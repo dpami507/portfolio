@@ -4,7 +4,7 @@ import path from 'node:path';
 const AIRTABLE_TOKEN = import.meta.env.VITE_AIRTABLE_TOKEN;
 const BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID;
 
-const BASE_DIR = "src/data/"
+const BASE_DIR = "public/data/"
 
 const PROJECT_TABLE = "Projects"
 const SKILLS_TABLE = "Skills"
