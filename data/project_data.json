@@ -14,10 +14,10 @@
     "role": "Solo Project",
     "date": "Fall 2026",
     "imgs": [
-      "public\\data\\project_imgs\\Spotify Universe_0_image.png",
-      "public\\data\\project_imgs\\Spotify Universe_1_image.png",
-      "public\\data\\project_imgs\\Spotify Universe_2_image.png",
-      "public\\data\\project_imgs\\Spotify Universe_3_image.png"
+      "/data/project_imgs/Spotify%20Universe_0_image.png",
+      "/data/project_imgs/Spotify%20Universe_1_image.png",
+      "/data/project_imgs/Spotify%20Universe_2_image.png",
+      "/data/project_imgs/Spotify%20Universe_3_image.png"
     ]
   },
   {
@@ -35,12 +35,12 @@
     "role": "Solo Project",
     "date": "Summer 2026",
     "imgs": [
-      "public\\data\\project_imgs\\Runaway Bomber_0_logo.png",
-      "public\\data\\project_imgs\\Runaway Bomber_1_Screenshot 2026-07-26 124128.png",
-      "public\\data\\project_imgs\\Runaway Bomber_2_Screenshot 2026-07-26 124213.png",
-      "public\\data\\project_imgs\\Runaway Bomber_3_Screenshot 2026-07-26 124227.png",
-      "public\\data\\project_imgs\\Runaway Bomber_4_Screenshot 2026-07-26 124246.png",
-      "public\\data\\project_imgs\\Runaway Bomber_5_Screenshot 2026-07-26 124305.png"
+      "/data/project_imgs/Runaway%20Bomber_0_logo.png",
+      "/data/project_imgs/Runaway%20Bomber_1_Screenshot%202026-07-26%20124128.png",
+      "/data/project_imgs/Runaway%20Bomber_2_Screenshot%202026-07-26%20124213.png",
+      "/data/project_imgs/Runaway%20Bomber_3_Screenshot%202026-07-26%20124227.png",
+      "/data/project_imgs/Runaway%20Bomber_4_Screenshot%202026-07-26%20124246.png",
+      "/data/project_imgs/Runaway%20Bomber_5_Screenshot%202026-07-26%20124305.png"
     ]
   },
   {
@@ -58,12 +58,12 @@
     "role": "Solo Project",
     "date": "Summer 2026",
     "imgs": [
-      "public\\data\\project_imgs\\Resaturator_0_logo.png",
-      "public\\data\\project_imgs\\Resaturator_1_Screenshot 2026-06-13 142443.png",
-      "public\\data\\project_imgs\\Resaturator_2_Screenshot 2026-06-13 142529.png",
-      "public\\data\\project_imgs\\Resaturator_3_Screenshot 2026-06-13 142346.png",
-      "public\\data\\project_imgs\\Resaturator_4_Screenshot 2026-06-13 143031.png",
-      "public\\data\\project_imgs\\Resaturator_5_Screenshot 2026-06-13 142416.png"
+      "/data/project_imgs/Resaturator_0_logo.png",
+      "/data/project_imgs/Resaturator_1_Screenshot%202026-06-13%20142443.png",
+      "/data/project_imgs/Resaturator_2_Screenshot%202026-06-13%20142529.png",
+      "/data/project_imgs/Resaturator_3_Screenshot%202026-06-13%20142346.png",
+      "/data/project_imgs/Resaturator_4_Screenshot%202026-06-13%20143031.png",
+      "/data/project_imgs/Resaturator_5_Screenshot%202026-06-13%20142416.png"
     ]
   },
   {
@@ -79,7 +79,7 @@
     "role": "Team Member",
     "date": "Spring 2026",
     "imgs": [
-      "public\\data\\project_imgs\\Drifiting Game_0_DriftingGame.png"
+      "/data/project_imgs/Drifiting%20Game_0_DriftingGame.png"
     ]
   },
   {
@@ -96,7 +96,7 @@
     "role": "Team Member",
     "date": "Spring 2026",
     "imgs": [
-      "public\\data\\project_imgs\\Network Lobby System_0_LobbySystem.png"
+      "/data/project_imgs/Network%20Lobby%20System_0_LobbySystem.png"
     ]
   },
   {
@@ -115,12 +115,12 @@
     "role": "Team Member",
     "date": "Spring 2026",
     "imgs": [
-      "public\\data\\project_imgs\\Within Nets Reach_0_WNR.png",
-      "public\\data\\project_imgs\\Within Nets Reach_1_uOJJGP.png",
-      "public\\data\\project_imgs\\Within Nets Reach_2_QRhxcQ.png",
-      "public\\data\\project_imgs\\Within Nets Reach_3_Cjen8o.png",
-      "public\\data\\project_imgs\\Within Nets Reach_4_EunPkX.png",
-      "public\\data\\project_imgs\\Within Nets Reach_5_viHw_W.png"
+      "/data/project_imgs/Within%20Nets%20Reach_0_WNR.png",
+      "/data/project_imgs/Within%20Nets%20Reach_1_uOJJGP.png",
+      "/data/project_imgs/Within%20Nets%20Reach_2_QRhxcQ.png",
+      "/data/project_imgs/Within%20Nets%20Reach_3_Cjen8o.png",
+      "/data/project_imgs/Within%20Nets%20Reach_4_EunPkX.png",
+      "/data/project_imgs/Within%20Nets%20Reach_5_viHw_W.png"
     ]
   },
   {
@@ -139,12 +139,12 @@
     "role": "Team Member",
     "date": "Spring 2026",
     "imgs": [
-      "public\\data\\project_imgs\\Gone Bananas!_0_GoneBananas.png",
-      "public\\data\\project_imgs\\Gone Bananas!_1_YtNEYX.png",
-      "public\\data\\project_imgs\\Gone Bananas!_2_EmvIrG.png",
-      "public\\data\\project_imgs\\Gone Bananas!_3_qmED6l.png",
-      "public\\data\\project_imgs\\Gone Bananas!_4_mijO2Z.png",
-      "public\\data\\project_imgs\\Gone Bananas!_5_cW+ACA.png"
+      "/data/project_imgs/Gone%20Bananas!_0_GoneBananas.png",
+      "/data/project_imgs/Gone%20Bananas!_1_YtNEYX.png",
+      "/data/project_imgs/Gone%20Bananas!_2_EmvIrG.png",
+      "/data/project_imgs/Gone%20Bananas!_3_qmED6l.png",
+      "/data/project_imgs/Gone%20Bananas!_4_mijO2Z.png",
+      "/data/project_imgs/Gone%20Bananas!_5_cW%2BACA.png"
     ]
   },
   {
@@ -162,8 +162,8 @@
     "role": "Team Member",
     "date": "Fall 2025",
     "imgs": [
-      "public\\data\\project_imgs\\Terrain Generation_0_genExample.png",
-      "public\\data\\project_imgs\\Terrain Generation_1_smileExample.png"
+      "/data/project_imgs/Terrain%20Generation_0_genExample.png",
+      "/data/project_imgs/Terrain%20Generation_1_smileExample.png"
     ]
   },
   {
@@ -180,7 +180,7 @@
     "role": "Team Member",
     "date": "Fall 2025",
     "imgs": [
-      "public\\data\\project_imgs\\Chess Bot_0_Board.png"
+      "/data/project_imgs/Chess%20Bot_0_Board.png"
     ]
   },
   {
@@ -195,7 +195,7 @@
     "role": "Solo Project",
     "date": "Summer 2025",
     "imgs": [
-      "public\\data\\project_imgs\\Thunderbird 4_0_Thunderbird4_07.png"
+      "/data/project_imgs/Thunderbird%204_0_Thunderbird4_07.png"
     ]
   },
   {
@@ -212,9 +212,9 @@
     "role": "Solo Project",
     "date": "Summer 2025",
     "imgs": [
-      "public\\data\\project_imgs\\KillerBeatz_0_KB.png",
-      "public\\data\\project_imgs\\KillerBeatz_1_chthHi.png",
-      "public\\data\\project_imgs\\KillerBeatz_2_xp_6JI.png"
+      "/data/project_imgs/KillerBeatz_0_KB.png",
+      "/data/project_imgs/KillerBeatz_1_chthHi.png",
+      "/data/project_imgs/KillerBeatz_2_xp_6JI.png"
     ]
   },
   {
@@ -230,7 +230,7 @@
     "role": "Team Lead",
     "date": "Spring 2025",
     "imgs": [
-      "public\\data\\project_imgs\\Little Guy Grove_0_Sound_2.png"
+      "/data/project_imgs/Little%20Guy%20Grove_0_Sound_2.png"
     ]
   },
   {
@@ -248,7 +248,7 @@
     "role": "Solo Project",
     "date": "Spring 2025",
     "imgs": [
-      "public\\data\\project_imgs\\TANKS: Card Edition_0_Tanks.png"
+      "/data/project_imgs/TANKS%3A%20Card%20Edition_0_Tanks.png"
     ]
   },
   {
@@ -266,7 +266,7 @@
     "role": "Solo Project",
     "date": "Spring 2025",
     "imgs": [
-      "public\\data\\project_imgs\\Charlie's Adventure_0_CharliesAdventure.png"
+      "/data/project_imgs/Charlie's%20Adventure_0_CharliesAdventure.png"
     ]
   },
   {
@@ -284,7 +284,7 @@
     "role": "Solo Project",
     "date": "Spring 2025",
     "imgs": [
-      "public\\data\\project_imgs\\Grapple Cube of Power_0_GrappleCupeOfPower.png"
+      "/data/project_imgs/Grapple%20Cube%20of%20Power_0_GrappleCupeOfPower.png"
     ]
   },
   {
@@ -302,7 +302,7 @@
     "role": "Team Member",
     "date": "Fall 2024",
     "imgs": [
-      "public\\data\\project_imgs\\John + Friend Office Crusade_0_JFOC.png"
+      "/data/project_imgs/John%20%2B%20Friend%20Office%20Crusade_0_JFOC.png"
     ]
   },
   {
@@ -317,7 +317,7 @@
     "role": "Solo Project",
     "date": "Summer 2024",
     "imgs": [
-      "public\\data\\project_imgs\\Thunderbird 3_0_Thunderbird3_010.png"
+      "/data/project_imgs/Thunderbird%203_0_Thunderbird3_010.png"
     ]
   },
   {
@@ -332,7 +332,7 @@
     "role": "Solo Project",
     "date": "Summer 2024",
     "imgs": [
-      "public\\data\\project_imgs\\Pyromaniac Penguins_0_PyromaniacPenguins.png"
+      "/data/project_imgs/Pyromaniac%20Penguins_0_PyromaniacPenguins.png"
     ]
   },
   {
@@ -347,7 +347,7 @@
     "role": "Solo Project",
     "date": "Summer 2024",
     "imgs": [
-      "public\\data\\project_imgs\\Thunderbird 2_0_Thunderbird2_003.png"
+      "/data/project_imgs/Thunderbird%202_0_Thunderbird2_003.png"
     ]
   },
   {
@@ -362,9 +362,9 @@
     "role": "Solo Project",
     "date": "Summer 2024",
     "imgs": [
-      "public\\data\\project_imgs\\Suits_0_Suit4.png",
-      "public\\data\\project_imgs\\Suits_1_Suit3.png",
-      "public\\data\\project_imgs\\Suits_2_Suit5.png"
+      "/data/project_imgs/Suits_0_Suit4.png",
+      "/data/project_imgs/Suits_1_Suit3.png",
+      "/data/project_imgs/Suits_2_Suit5.png"
     ]
   },
   {
@@ -379,7 +379,7 @@
     "role": "Solo Project",
     "date": "Summer 2024",
     "imgs": [
-      "public\\data\\project_imgs\\TARDIS Interior_0_DoorShot4K.png"
+      "/data/project_imgs/TARDIS%20Interior_0_DoorShot4K.png"
     ]
   },
   {
@@ -394,7 +394,7 @@
     "role": "Solo Project",
     "date": "Summer 2024",
     "imgs": [
-      "public\\data\\project_imgs\\Thunderbird 1_0_Thunderbird1_003.png"
+      "/data/project_imgs/Thunderbird%201_0_Thunderbird1_003.png"
     ]
   }
 ]

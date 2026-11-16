@@ -1,14 +1,14 @@
 [
   {
     "id": "no-photo",
-    "img": "public\\data\\asset_imgs\\NoPhoto.png"
+    "img": "/data/asset_imgs/NoPhoto.png"
   },
   {
     "id": "resume",
-    "img": "public\\data\\asset_imgs\\David Amidon - Resume (May 2026).png"
+    "img": "/data/asset_imgs/David%20Amidon%20-%20Resume%20(May%202026).png"
   },
   {
     "id": "portrait",
-    "img": "public\\data\\asset_imgs\\DavidAmidon.jpg"
+    "img": "/data/asset_imgs/DavidAmidon.jpg"
   }
 ]
