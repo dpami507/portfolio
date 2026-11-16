@@ -1,6 +1,6 @@
-import projectData from '../src/data/project_data.json'
-import skillData from '../src/data/skill_data.json'
-import assetData from '../src/data/asset_data.json'
+import projectData from '../public/data/project_data.json'
+import skillData from '../public/data/skill_data.json'
+import assetData from '../public/data/asset_data.json'
 
 export function getProjects() {
     return projectData ?? [];
