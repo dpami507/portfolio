@@ -11,21 +11,21 @@
   gap: 25px;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1800px) {
   .workcomp-container
   {
     grid-template-columns: auto auto auto;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1400px) {
   .workcomp-container
   {
     grid-template-columns: auto auto;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .workcomp-container
   {
     grid-template-columns: auto;
